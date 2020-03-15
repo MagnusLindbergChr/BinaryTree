@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace BinaryTree
 {
@@ -16,7 +19,7 @@ namespace BinaryTree
         public void Insert(int data)
         {
             // if root not null... call insert on the root node
-            if(root != null)
+            if (root != null)
             {
                 root.Insert(data);
             }
@@ -24,6 +27,30 @@ namespace BinaryTree
             else
             {
                 root = new TreeNode(data);
+            }
+        }
+
+        public void InOrderTraversal()
+        {
+            if (root != null)
+            {
+                root.InOrderTaversal();
+            }
+        }
+
+        public void PreOrderTraversal()
+        {
+            if (root != null)
+            {
+                root.PreOrderTraversal();
+            }
+        }
+
+        public void PostOrderTraversal()
+        {
+            if (root != null)
+            {
+                root.PostOrderTraversal();
             }
         }
     }
